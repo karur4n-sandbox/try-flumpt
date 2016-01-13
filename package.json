@@ -1,0 +1,25 @@
+{
+  "name": "try-flumpt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify src/app.jsx -o dest/app.js -t [ babelify --presets [ es2015 react ] ]",
+    "watch": "watchify -t [ babelify --presets [ es2015 react ] ] src/app.jsx -o dest/app.js -v"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babelify": "^7.2.0",
+    "browserify": "^13.0.0",
+    "watchify": "^3.7.0"
+  },
+  "dependencies": {
+    "flumpt": "^0.1.4",
+    "flux": "^2.1.1",
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6"
+  }
+}
